@@ -2,7 +2,8 @@ const CACHE_NAME = 'alerta-site-cache-v1';
 const urlsToCache = [
     './index.html',
     './style.css',
-    './script.js'
+    './script.js',
+    './manifest.json'
 ];
 
 self.addEventListener('install', event => {
@@ -42,13 +43,14 @@ self.addEventListener('activate', event => {
     );
 });
 
-self.addEventListener('push', event => {
-    const title = 'Alerta Site';
-    const options = {
-        body: event.data.text(),
-        icon: 'icon-192x192.png',
-        badge: 'badge.png'
-    };
+// A parte de notificações push foi comentada, pois precisa de um backend para funcionar corretamente
+// self.addEventListener('push', event => {
+//     const title = 'Alerta Site';
+//     const options = {
+//         body: event.data.text(),
+//         icon: 'icon-192x192.png',
+//         badge: 'badge.png'
+//     };
 
-    event.waitUntil(self.registration.showNotification(title, options));
-});
+//     event.waitUntil(self.registration.showNotification(title, options));
+// });
