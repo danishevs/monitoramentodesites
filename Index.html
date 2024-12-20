@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4CAF50">
+    <title>Alerta Site</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="container">
+        <h1>Alerta Site</h1>
+        <input type="url" id="siteUrl" placeholder="Insira a URL do site" required>
+        <button id="monitorBtn">Iniciar Monitoramento</button>
+        <div id="status">Status: Inativo</div>
+        <div id="lastCheck">Última Verificação: -</div>
+        <h2>Histórico de Atualizações</h2>
+        <ul id="updatesList"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
