@@ -38,7 +38,7 @@ async function checkSite(url) {
     lastCheckDiv.textContent = `Última Verificação: ${new Date().toLocaleString()}`;
     try {
         const response = await fetch(url, { mode: 'no-cors' }); // no-cors para evitar problemas de CORS
-        // const text = await response.text(); // remover linha que ocasiona erro
+        // const text = await response.text(); // Linha removida devido a problemas com no-cors
         // if (lastContent && lastContent !== text) {
         //     notifyUser('Site Atualizado!');
         //     addUpdateToHistory(url);
